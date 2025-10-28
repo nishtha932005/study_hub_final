@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beautiful Notes - Google Keep Style</title>
+<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="/notes/notes.css" />
+</head>
+<body>
+      <header>
+   
+    <h1>✏️ My Notes</h1>
+    <nav>
+      <a href="/index.html">🏠 Home</a>
+    </nav>
+  </header>
+
+
+<h1>Write notes here</h1>
+
+<form id="add-note-form" autocomplete="off">
+  <input type="text" id="note-title" placeholder="Note Title (Heading)" required />
+  <textarea id="note-content" placeholder="Write bullet points, one per line" required></textarea>
+  <button type="submit">Add Note</button>
+</form>
+
+<div id="notes-container"></div>
+
+<script src="/notes/notes.js"></script>
+
+</body>
+</html>

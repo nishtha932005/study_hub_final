@@ -1,0 +1,159 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fdf6e3;
+  margin: 0;
+  padding: 0px 0px 40px;
+  min-height: 100vh;
+  color: #333;
+  user-select: none;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #2c3e50;
+  user-select: text;
+}
+
+/* Form styling */
+form#add-note-form {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  user-select: text;
+}
+
+form#add-note-form input[type="text"],
+form#add-note-form textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+form#add-note-form input[type="text"]:focus,
+form#add-note-form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+form#add-note-form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#add-note-form button:hover {
+  background: #2980b9;
+}
+
+/* Notes container */
+#notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+  user-select: text;
+}
+
+/* Each note card */
+.note-card {
+  position: relative;
+  width: 280px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  padding: 20px 20px 25px 20px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInScale 0.4s ease forwards;
+  cursor: default;
+  word-break: break-word;
+}
+
+/* Heading */
+.note-card h3 {
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #34495e;
+  border-bottom: 1.5px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Bullet list */
+.note-card ul {
+  margin: 0;
+  padding-left: 18px;
+  flex-grow: 1;
+}
+
+.note-card ul li {
+  margin-bottom: 8px;
+  line-height: 1.35;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+/* Delete button top right */
+.delete-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #e74c3c;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+  user-select: none;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  #notes-container {
+    justify-content: center;
+  }
+  .note-card {
+    width: 90vw;
+    max-width: 320px;
+  }
+}

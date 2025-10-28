@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Class 11 Lectures</title>
+  <link rel="stylesheet" href="lectures.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  
+  
+</head>
+  <header>
+    <h1>📐 Math Zone</h1>
+    <nav>
+      <a href="../../../index.html">🏠 Home</a>
+      <a href="/subjects/maths/math.html">Back to Math</a>
+    </nav>
+  </header>
+
+<body>
+<main class="lecture-container">
+
+  <!-- Chapter 1 -->
+  <section class="chapter">
+    <h3 onclick="toggleLectures('ch1')">▶ Ch 1: Sets & Functions</h3>
+    <ul id="ch1" class="lecture-list hidden">
+      <li onclick="openVideo('videos/chp1/1a.mp4')">1.1 Introduction</li>
+      <li onclick="openVideo('videos/chp2/2.1.mp4')">1.2 Types of Functions</li>
+    </ul>
+  </section>
+
+  <!-- Chapter 2 -->
+  <section class="chapter">
+    <h3 onclick="toggleLectures('ch2')">▶ Ch 2: Trigonometry</h3>
+    <ul id="ch2" class="lecture-list hidden">
+      <li onclick="openVideo('videos/video1.mp4')">2.1 Trig Basics</li>
+      <li onclick="openVideo('videos/video1.mp4')">2.2 Identities</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- Video Modal -->
+<div id="videoModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeVideo()">&times;</span>
+    <video id="lectureVideo" controls autoplay></video>
+  </div>
+</div>
+
+<script src="lectures.js"></script>
+  <script src="/subjects/maths/maths.js"></script>
+  <div class="pomodoro-notif">
+    <span id="timer">25:00</span>
+  </div>
+  <script src="../../../timer.js"></script>
+
+</body>
+</html>
